@@ -1,11 +1,12 @@
-<div class="container">
-  <h1 class="text-center my-2">Consultorio Citas</h1>
-  <div class="row mt-4">
+<div class="container pt-2">
+  <div class="text-center tituloClass">CONSULTORIO APP</div>
+  <div class="row mt-2">
     <div class="col-lg-6">
-      <app-crear-cita></app-crear-cita>
+      <app-crear-cita (nuevaCita)="agregarCita($event)"></app-crear-cita>
     </div>
     <div class="col-lg-6">
-      <app-list-citas></app-list-citas>
+      <app-list-citas [listadoCitas]="listCitias" (deleteCita)="eliminarCitaListado($event)"></app-list-citas>
     </div>
+
   </div>
 </div>
